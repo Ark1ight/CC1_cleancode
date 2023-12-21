@@ -9,9 +9,14 @@ class TestYams(unittest.TestCase):
         self.assertEqual(player1.score,0)
           
     def test_is_brelan(self):
-        player1_rolls = [1,1,1,3,5]
-        brelan = Yams.is_brelan(player1_rolls)
+        player_rolls = [1,1,1,3,5]
+        brelan = Yams.is_brelan(player_rolls)
         self.assertEqual(brelan,28)
+    
+    def test_is_carre(self):
+        player_rolls = [1,1,1,1,5]
+        carre = Yams.is_carre(player_rolls)
+        self.assertEqual(carre,35)
         
 
         
