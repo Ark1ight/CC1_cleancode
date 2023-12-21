@@ -40,9 +40,15 @@ class TestYams(unittest.TestCase):
         self.assertEqual(sum,120)
     
     def test_is_yams(self):
-        player_rolls = [3,3,3,3,3]
-        yams = Yams.is_yams(player_rolls)
-        self.assertEqual(yams,50)
+        player_rolls = [[3,3,3,3,3],
+                        [3,3,3,3,3],
+                        [3,3,3,3,3],
+                        [3,3,3,3,3],
+                        ]
+        sum = 0
+        for throws in player_rolls:
+            sum += Yams.is_yams(throws)
+        self.assertEqual(sum,200)
         
 
         
