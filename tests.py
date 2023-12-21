@@ -10,7 +10,8 @@ class TestYams(unittest.TestCase):
     
     def test_one_roll(self):
         player1 = Player()
-        player1.roll()
+        self.assertGreater(player1.roll(),0)
+       
 
 
 
