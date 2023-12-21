@@ -22,6 +22,11 @@ class TestYams(unittest.TestCase):
         player_rolls = [1,1,1,5,5]
         full = Yams.is_full(player_rolls)
         self.assertEqual(full,30)
+    
+    def test_is_yams(self):
+        player_rolls = [3,3,3,3,3]
+        yams = Yams.is_yams(player_rolls)
+        self.assertEqual(yams,50)
         
 
         
