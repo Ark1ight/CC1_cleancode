@@ -1,5 +1,5 @@
 import unittest
-from yams import Player
+from Player import Player
 
 class TestYams(unittest.TestCase):
     
@@ -7,6 +7,10 @@ class TestYams(unittest.TestCase):
         player1 = Player()
         player2 = Player()
         self.assertEqual(player1.score,0)
+    
+    def test_one_roll(self):
+        player1 = Player()
+        player1.roll()
 
 
 
