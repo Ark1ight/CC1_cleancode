@@ -18,6 +18,11 @@ class TestYams(unittest.TestCase):
         carre = Yams.is_carre(player_rolls)
         self.assertEqual(carre,35)
         
+    def test_is_full(self):
+        player_rolls = [1,1,1,5,5]
+        full = Yams.is_full(player_rolls)
+        self.assertEqual(full,30)
+        
 
         
 
