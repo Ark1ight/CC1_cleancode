@@ -9,7 +9,7 @@ class Yams():
     def is_brelan(throws):
         for valeur in throws:
             if throws.count(valeur) >= 3:
-                return True
-        return False
+                return 28
+        return 0
             
             

@@ -11,7 +11,7 @@ class TestYams(unittest.TestCase):
     def test_is_brelan(self):
         player1_rolls = [1,1,1,3,5]
         brelan = Yams.is_brelan(player1_rolls)
-        self.assertTrue(brelan)
+        self.assertEqual(brelan,28)
         
 
         
