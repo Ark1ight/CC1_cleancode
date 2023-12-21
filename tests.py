@@ -1,18 +1,20 @@
 import unittest
 from Player import Player
+from Yams import Yams
 
 class TestYams(unittest.TestCase):
     
     def test_create_player(self):
         player1 = Player()
-        player2 = Player()
         self.assertEqual(player1.score,0)
-    
-    def test_one_roll(self):
-        player1 = Player()
-        self.assertGreater(player1.roll(),0)
-       
+          
+    def test_is_brelan(self):
+        player1_rolls = [1,1,1,3,5]
+        brelan = Yams.is_brelan(player1_rolls)
+        self.assertTrue(brelan)
+        
 
+        
 
 
 if __name__ == '__main__':
