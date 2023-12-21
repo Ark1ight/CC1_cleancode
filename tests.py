@@ -9,19 +9,35 @@ class TestYams(unittest.TestCase):
         self.assertEqual(player1.score,0)
           
     def test_is_brelan(self):
-        player_rolls = [1,1,1,3,5]
-        brelan = Yams.is_brelan(player_rolls)
-        self.assertEqual(brelan,28)
+        player_rolls = [[1,1,1,3,5],
+                        [1,1,1,3,5],
+                        [1,1,1,3,5]
+                        ]
+        sum = 0
+        for throws in player_rolls:
+            sum += Yams.is_brelan(throws)
+        self.assertEqual(sum,84)
     
     def test_is_carre(self):
-        player_rolls = [1,1,1,1,5]
-        carre = Yams.is_carre(player_rolls)
-        self.assertEqual(carre,35)
+        player_rolls = [[1,1,1,1,5],
+                        [1,1,1,1,5],
+                        [1,1,1,1,5],
+                        [1,1,1,1,5]]
+        sum = 0
+        for throws in player_rolls:
+            sum += Yams.is_carre(throws)
+        self.assertEqual(sum,140)
         
     def test_is_full(self):
-        player_rolls = [1,1,1,5,5]
-        full = Yams.is_full(player_rolls)
-        self.assertEqual(full,30)
+        player_rolls = [[1,1,1,5,5],
+                        [1,1,1,5,5],
+                        [1,1,1,5,5],
+                        [2,1,1,5,5]
+                        ]
+        sum = 0
+        for throws in player_rolls:
+            sum += Yams.is_full(throws)
+        self.assertEqual(sum,120)
     
     def test_is_yams(self):
         player_rolls = [3,3,3,3,3]

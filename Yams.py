@@ -23,6 +23,12 @@ class Yams():
             if throws.count(valeur) in [2,3]:
                 return 30
         return 0
+    
+    def is_yams(throws):
+        for valeur in throws:
+            if throws.count(valeur) >= 5:
+                return 50
+        return 0
         
             
             
