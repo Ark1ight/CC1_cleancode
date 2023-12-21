@@ -17,5 +17,12 @@ class Yams():
             if throws.count(valeur) >= 4:
                 return 35
         return 0
+    
+    def is_full(throws):
+        for valeur in throws:
+            if throws.count(valeur) in [2,3]:
+                return 30
+        return 0
+        
             
             
